@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Silia El Ghazi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .section__container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .skills-container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-category {
+            margin-bottom: 30px;
+        }
+
+        .skills-category h3 {
+            background-color: #d3b8fa;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .skills-category ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skills-category li {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .skills-category li:hover {
+            background-color: #d3b8fa;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="index.html">Silia El Ghazi</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="projects.html">Projets</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Section À propos -->
+
+<section class="section section__container">
+    <div class="skills-container">
+        <div class="skills-category">
+            <h3>Langages de Programmation</h3>
+            <ul>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Python</li>
+            </ul>
+        </div>
+
+        <div class="skills-category">
+            <h3>Frameworks & Bibliothèques</h3>
+            <ul>
+                <li>Spring Boot</li>
+                <li>React</li>
+                <li>Nest.js</li>
+                <li>Next.js</li>
+                <li>Angular</li>
+                <li>Laravel</li>
+            </ul>
+        </div>
+
+        <div class="skills-category">
+            <h3>Bases de Données</h3>
+            <ul>
+                <li>MySQL</li>
+                <li>Oracle(PL/SQL)</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+            </ul>
+        </div>
+
+        <div class="skills-category">
+            <h3>Outils & DevOps</h3>
+            <ul>
+                <li>Git</li>
+                <li>Docker</li>
+                <li>Jenkins</li>
+                <li>GitLab CI/CD</li>
+                <li>Jira</li>
+                <li>Shell</li>
+                <li>Microsoft Azure</li>
+                <li>AWS</li>
+            </ul>
+        </div>
+
+        <div class="skills-category">
+            <h3>Certifications</h3>
+            <ul>
+                <li>Oracle Certified Professional - Java SE 21 Developer </li>
+                <li>C intermediate -Sololearn</li>
+                <li>PHP -Sololearn</li>
+                <li>SQL intermediate -Sololearn</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2023 Silia El Ghazi</p>
+</footer>
+</body>
+</html>

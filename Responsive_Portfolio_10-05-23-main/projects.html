@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Silia El Ghazi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #faf5ff;
+        }
+
+        .section__container {
+            width: 100%;
+            background-color: #faf5ff;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            max-width: 1400px;
+            width: 90%;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 800px; /* Augmenter la taille des images */
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .description {
+            margin-top: 15px;
+            color: #1f2937;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="index.html">Silia El Ghazi</a></div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="projects.html">Projets</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section section__container">
+    <div class="content">
+        <h2 class="title">Mes <span>Projets</span></h2>
+        <div class="gallery">
+            <div class="project">
+                <a href="content/mirai.html">
+                    <img src="assets/img_5.png" alt="MIRAI Projet 1">
+                </a>
+                <p class="description">MIRAI - Un projet innovant pour la gestion de stages et de mentorat.</p>
+            </div>
+            <div class="project">
+                <a href="content/projet2.html">
+                    <img src="assets/img_6.png" alt="Projet 2">
+                </a>
+                <p class="description"> Plateforme Web de Gestion des Activités pour Enfants.</p>
+            </div>
+            <div class="project">
+                <a href="content/projet3.html">
+                    <img src="assets/img_13.png" alt="Projet 3">
+                </a>
+                <p class="description">Projet 3 - Application pratique de concepts modernes de développement.</p>
+            </div>
+            <div class="project">
+                <a href="content/projet4.html">
+                    <img src="assets/img_12.png" alt="Projet 4">
+                </a>
+                <p class="description">Gestion d'une Ecole .</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Silia El Ghazi</p>
+</footer>
+
+</body>
+</html>

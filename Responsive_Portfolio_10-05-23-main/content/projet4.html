@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Ges.on d'une École</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf5ff;
+            color: #1f2937;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #7e22ce;
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+            z-index: 10; /* S'assure qu'il est au-dessus des autres éléments */
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .arrow-left {
+            left: 15px;
+        }
+        .arrow-right {
+            right: 15px;
+        }
+        .features, .tech-stack {
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 40px;
+            text-align: left;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .features h2, .tech-stack h2 {
+            color: #7e22ce;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .features li {
+            background: #e9d5ff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            flex: 1 1 calc(50% - 20px);
+            text-align: center;
+            min-width: 250px;
+        }
+        .tech-stack {
+            text-align: center;
+        }
+        nav {
+            width: 100%;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav__content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav__content ul li {
+            margin: 0 15px;
+        }
+
+        .nav__content ul li a {
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 20px 40px; /* Ajout de padding-top pour éviter que le titre soit caché */
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background: #7e22ce;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .features ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .features li {
+                width: 100%;
+                max-width: 400px;
+            }
+            .arrow {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="../index.html">Silia El Ghazi</a></div>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../projects.html">Projets</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="title">Système de Gestion d'une École</h1>
+    <p class="description">
+        une application de gestion d'une école permettant d'administrer les étudiants, professeurs, modules, et inscriptions. Cette application utilise Java, JavaFX, et JDBC pour gérer les données dans une base de données relationnelle et offrir une interface graphique intuitive.
+    </p>
+    <div class="image-container">
+        <button class="arrow arrow-left" onclick="prevImage()">&#10094;</button>
+        <img src="../assets/img_12.png" alt="Aperçu du projet MIRAI" class="project-image" id="slider">
+        <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="features">
+        <h2>🚀 Fonctionnalités Clés</h2>
+        <ul>
+            <li>📋 Ajouter, modifier et supprimer des étudiants.</li>
+            <li>👩‍🏫 Rechercher des étudiants par nom, numéro de matricule ou promotion</li>
+            <li>📊 Afficher la liste des étudiants avec leurs informations</li>
+            <li>📆 Gestion des professeurs</li>
+            <li>💼 Gestion des modules</li>
+            <li>📑 Gestion des inscription</li>
+            <li>🔔 Statistiques sur l'école</li>
+            <li>💬 Interface utilisateur (JavaFX) </li>
+            <li>💼 Exportation des données(pdf / csv) </li>
+
+        </ul>
+    </div>
+
+    <div class="tech-stack">
+        <h2>🛠️ Technologies Utilisées</h2>
+        <span>JavaFx</span>
+        <span>Java</span>
+        <span>JDBC</span>
+        <span>MySQL</span>
+        <span>FXML</span>
+    </div>
+</div>
+<script>
+    let images = ["../assets/img_7.png", "../assets/img_8.png", "../assets/img_9.png", "../assets/img_10.png", "../assets/img_11.png"];
+    let currentIndex = 0;
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("slider").src = images[currentIndex];
+    }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById("slider").src = images[currentIndex];
+    }
+</script>
+</body>
+</html>
